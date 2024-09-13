@@ -11,3 +11,5 @@ function countPairs(nums: number[], target: number): number {
     }
     return count;
 };
+
+//new solution ????
