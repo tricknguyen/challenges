@@ -2,12 +2,19 @@
 
 //=> wrong solution try to find another one
 function findSpecialInteger(arr: number[]) {
-    for (let i=0; i<arr.length; i++) {
-        let indexItemLoop = arr.findIndex((t) => t == arr[i]);
-        if (indexItemLoop > i) {
-            let percentAppear = ((indexItemLoop - i)/arr.length)*100
-            if (percentAppear > 25) {
-                return arr[i];
+    let result = arr[0];
+    let count = 0;
+    if (arr.length == 1) {
+        return arr[0];
+    } else {
+        for (let i = 1; i < arr.length; i++) {
+            if (result == arr[i]) {
+                count++;
+                if ((count / arr.length) * 100 > 25) {
+                    return result;
+                }
+            } else {
+                result = arr[i];
             }
         }
     }
