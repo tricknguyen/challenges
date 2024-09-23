@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
 
-function findMin(nums: number[]): number {
+function findMin(nums: number[]) {
     let left = 0;
     let right = nums.length - 1;
 
