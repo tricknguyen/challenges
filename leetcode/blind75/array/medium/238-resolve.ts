@@ -11,3 +11,18 @@ function productExceptSelf(nums: number[]): number[] {
     }
     return result;
 };
+
+//The best optimize solution
+function productExceptSelfV2(nums: number[]): number[] {
+    const result: Array<number> = [];
+    let product = 1;
+    let zeros = 0;
+    nums.forEach(num => {
+        if (num==0) {
+            zeros++;
+        }
+        product = product * num;
+    });
+
+    return result;
+};
